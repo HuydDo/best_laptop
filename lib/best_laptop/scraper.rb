@@ -83,8 +83,6 @@ class BestLaptop::Scraper
       detail[:cons] = item.css("li p")[1].text.strip
       detail[:bottom_line] = item.css("li p")[2].text.strip
       
-      # detail
-     
     end
     detail
   end

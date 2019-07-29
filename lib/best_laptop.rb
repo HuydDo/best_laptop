@@ -1,16 +1,17 @@
 # require "best_laptop/version"
 
-# module BestLaptop
+module BestLaptop
 #   class Error < StandardError; end
 #   # Your code goes here...
-# end
+end
 
-
+require 'pry'
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
 
+require_relative "./best_laptop/scraper"
+require_relative "./best_laptop/labtop"
 require_relative "./best_laptop/version"
 require_relative "./best_laptop/cli"
-require_relative "./best_laptop/labtop"
-require_relative "./best_laptop/scraper"
+
+
