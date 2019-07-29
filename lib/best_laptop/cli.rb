@@ -12,7 +12,7 @@ class BestLaptop::CLI
   end
   
   def list_laptops
-    puts "The Best Laptops for 2019.".colorize(:light_yellow)
+    puts "The Best Laptops for 2019.".colorize(:yellow)
     @list = BestLaptop::Laptop.all
     @list.each.with_index(1) do |laptop, i|
       puts "#{i}. #{laptop.name}"
@@ -28,17 +28,14 @@ class BestLaptop::CLI
   def menu
     input = nil
     while input != 'exit'
-      puts "Enter the number of the laptop for more information."
-      puts "Type show to display the list. Type exit to quit. "
+      puts "Enter the number of the laptop for more information.\nType show to display the list. Type exit to quit. "
       input = gets.strip.downcase
       
       if input.to_i > 0 and input.to_i <= @list.size
         laptop = @list[input.to_i - 1]
         puts
         puts "Name:".colorize(:light_blue) + " #{laptop.name}"
-        puts 
         puts "MSRP:".colorize(:light_blue) + " #{laptop.price}"
-        puts 
         puts "Review:".colorize(:light_blue) + " #{laptop.description}"
         puts
         puts "Would you like to read more?"
@@ -48,9 +45,7 @@ class BestLaptop::CLI
           add_laptop_detail(laptop.url,input.to_i - 1)
           puts
           puts "Pros:".colorize(:light_green) + " #{laptop.pros}"
-          puts
           puts "Cons:".colorize(:light_red) + " #{laptop.cons}"
-          puts
           puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
         end
