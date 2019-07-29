@@ -1,5 +1,5 @@
 class BestLaptop::Laptop
-# class Laptop
+
   attr_accessor :name, :price, :description, :url, :pros, :cons, :bottom_line, :content
   
   @@all = []
@@ -8,10 +8,6 @@ class BestLaptop::Laptop
     laptop_hash.each {|key,value| self.send(("#{key}="), value)}
     @@all << self
   end
-  
-  # def initialize
-  #   @@all << self
-  # end
   
   def self.create(laptops_array)
     laptops_array.each do |laptop|
@@ -23,11 +19,6 @@ class BestLaptop::Laptop
     attr_hash.each do |key, value| 
       self.send(("#{key}="), value)
     end
-  end
-  
-  def self.content
-     # @content ||= Scraper.new.scrape_laptop_page(@url)
-     @content ||= BestLaptop::Scraper.new.scrape_laptop_page(@url)
   end
   
   def self.all
