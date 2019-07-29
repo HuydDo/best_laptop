@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-#require_relative "../lib/CLI/cli.rb"
+require_relative "../lib/best_laptop"
 #CLI.new.run
 
 require "bundler/setup"
-require "best_laptop"
+
 BestLaptop::CLI.new.run
 
 
