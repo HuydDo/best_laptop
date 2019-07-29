@@ -10,7 +10,7 @@ require 'nokogiri'
 require 'open-uri'
 
 require_relative "./best_laptop/scraper"
-require_relative "./best_laptop/labtop"
+require_relative "./best_laptop/laptop"
 require_relative "./best_laptop/version"
 require_relative "./best_laptop/cli"
 
