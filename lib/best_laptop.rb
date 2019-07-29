@@ -8,6 +8,8 @@ end
 require 'pry'
 require 'nokogiri'
 require 'open-uri'
+require 'colorize'
+
 
 require_relative "./best_laptop/scraper"
 require_relative "./best_laptop/laptop"

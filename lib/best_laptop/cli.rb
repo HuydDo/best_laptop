@@ -12,7 +12,7 @@ class BestLaptop::CLI
   end
   
   def list_laptops
-    puts "The Best Laptops for 2019."
+    puts "The Best Laptops for 2019.".colorize(:light_yellow)
     @list = BestLaptop::Laptop.all
     @list.each.with_index(1) do |laptop, i|
       puts "#{i}. #{laptop.name}"
@@ -35,11 +35,11 @@ class BestLaptop::CLI
       if input.to_i > 0 and input.to_i <= @list.size
         laptop = @list[input.to_i - 1]
         puts
-        puts "Name: #{laptop.name}"
+        puts "Name:".colorize(:light_blue) + " #{laptop.name}"
         puts 
-        puts laptop.price
+        puts "MSRP:".colorize(:light_blue) + " #{laptop.price}"
         puts 
-        puts "Review: #{laptop.description}"
+        puts "Review:".colorize(:light_blue) + " #{laptop.description}"
         puts
         puts "Would you like to read more?"
         answer = gets.strip
@@ -47,11 +47,11 @@ class BestLaptop::CLI
         if ["Y", "YES"].include?(answer.upcase)
           add_laptop_detail(laptop.url,input.to_i - 1)
           puts
-          puts "Pros: #{laptop.pros}"
+          puts "Pros:".colorize(:light_green) + " #{laptop.pros}"
           puts
-          puts "Cons: #{laptop.cons}"
+          puts "Cons:".colorize(:light_red) + " #{laptop.cons}"
           puts
-          puts "Bottom Line: #{laptop.bottom_line}"
+          puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
         end
         

@@ -19,7 +19,7 @@ class BestLaptop::Scraper
     self.get_laptops.each do |item|
       laptop = {}
       laptop[:name] = item.css("h3").text.strip
-      laptop[:price] = item.css(".msrp").text.strip
+      laptop[:price] = item.css(".msrp").text.gsub("MSRP: ","").strip
       laptop[:description] =  item.css(".pros-cons").text.gsub("Bottom Line: ","").strip
       laptop[:url] = item.css("a").last["href"]
       laptops << laptop
