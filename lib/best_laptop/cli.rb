@@ -12,11 +12,12 @@ class BestLaptop::CLI
   end
   
   def list_laptops
-    puts "The Best Laptops for 2019.".colorize(:yellow)
+    puts "The Best Laptops for 2019.\n".colorize(:yellow)
     @list = BestLaptop::Laptop.all
     @list.each.with_index(1) do |laptop, i|
       puts "#{i}. #{laptop.name}"
     end
+    puts
   end
   
   def add_laptop_detail(url,index)
