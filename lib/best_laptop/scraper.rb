@@ -1,10 +1,6 @@
 
 class BestLaptop::Scraper
 
-  def initialize(url = nil)
-    @url = url
-  end
-
   def self.get_page
     doc = Nokogiri::HTML(open("https://www.pcmag.com/roundup/255115/the-best-laptops"))
   end
@@ -29,7 +25,6 @@ class BestLaptop::Scraper
   
   def self.scrape_laptop_page(laptop_url)
     doc = Nokogiri::HTML (open(laptop_url))
- 
     detail = {}
     
     doc.css(".pros-cons-bl").each do |item|
@@ -37,15 +32,17 @@ class BestLaptop::Scraper
       detail[:cons] = item.css("li p")[1].text.strip
       detail[:bottom_line] = item.css("li p")[2].text.strip
     end
+    
     detail
   end
   
   def print_laptops
     self.scrape_laptop_page
+    
     Laptop.all.each do |item|
-       puts "Pros: #{item.pros} "
-       puts "Cons: #{item.cons} "
-       puts "Bottom Line: #{item.bottom_line} "
+     puts "Pros: #{item.pros} "
+     puts "Cons: #{item.cons} "
+     puts "Bottom Line: #{item.bottom_line} "
     end
   end
   
