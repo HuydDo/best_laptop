@@ -1,4 +1,3 @@
-
 class BestLaptop::Scraper
 
   def self.get_page
