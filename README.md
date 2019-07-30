@@ -1,7 +1,7 @@
 # Best Laptop
 
 This ruby gem provides a CLI to display the The Best Laptops for 2019. 
-The data was contributed from pcmagazine website.
+The data was contributed by pcmagazine website.
 
 ## Installation
 

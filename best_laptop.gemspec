@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'huyddo40@gmail.com'"]
 
   spec.summary       = "The Best Laptops for 2019"
-  spec.description   = "Provides details on top 10 laptops for 2019"
+  spec.description   = "Shows details on the top 10 laptops for 2019"
   spec.homepage      = "https://github.com/HuydDo/best_laptop"
   spec.license       = "MIT"
   spec.executables << 'run'
@@ -22,8 +22,8 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
-    spec.metadata["homepage_uri"] = 'https://github.com/HuydDo/best_laptop'
-    spec.metadata["source_code_uri"] = "https://github.com/HuydDo/best_laptop"
+    spec.metadata["homepage_uri"] = 'https://github.com/HuydDo'
+    spec.metadata["source_code_uri"] = 'https://github.com/HuydDo/best_laptop'
     spec.metadata["changelog_uri"] = "https://github.com/HuydDo/best_laptop"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
