@@ -1,8 +1,9 @@
 # Best Laptop
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/best_laptop`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-This ruby provides a CLI to display the The Best Laptops for 2019
+
+This ruby gem provides a CLI to display the The Best Laptops for 2019.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -10,7 +11,6 @@ Add this line to your application's Gemfile:
 ```ruby
 gem 'best_laptop'
 ```
-$gem install best_laptop
 
 And then execute:
 
@@ -24,7 +24,7 @@ Or install it yourself as:
 
 Type the below line and follow the screen promps
 
-$ best_laptop
+    $ best_latop
 
 ## Development
 
