@@ -49,6 +49,8 @@ class BestLaptop::CLI
           puts "Cons:".colorize(:light_red) + " #{laptop.cons}"
           puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
+        else
+          puts "Would you like to exit or show the list again?"
         end
         
       elsif input == "show"
