@@ -53,7 +53,8 @@ class BestLaptop::CLI
         
       elsif input == "show"
         list_laptops
-      elsif input != 'exit'
+      # elsif input != 'exit'
+      else
         puts "Would you like to exit or show the list again?"
       end
     end
