@@ -23,7 +23,7 @@ Or install it yourself as:
 
 Type the below line and follow the screen promps
 
-    $ best_latop
+    $ ruby bin/run
 
 ## Development
 
