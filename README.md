@@ -5,20 +5,6 @@ The data was contributed by pcmagazine website.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'best_laptop'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install best_laptop
-
 ## Usage
 
 Type the below line and follow the screen promps
