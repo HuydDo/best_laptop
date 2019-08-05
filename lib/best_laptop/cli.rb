@@ -28,6 +28,7 @@ class BestLaptop::CLI
   
   def menu
     input = nil
+    
     while input != 'exit'
       puts "Enter the number of the laptop for more information.\nType 'show' to display the list. Type 'exit' to quit."
       input = gets.strip.downcase
@@ -41,7 +42,6 @@ class BestLaptop::CLI
         puts
         puts "Would you like to read more?"
         answer = gets.strip
-    
         if ["Y", "YES"].include?(answer.upcase)
           add_laptop_detail(laptop.url,input.to_i - 1)
           puts
@@ -50,7 +50,6 @@ class BestLaptop::CLI
           puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
         end
-        
       elsif input == "show"
         list_laptops
       # elsif input != 'exit'

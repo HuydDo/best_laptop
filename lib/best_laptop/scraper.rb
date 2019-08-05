@@ -19,6 +19,7 @@ class BestLaptop::Scraper
       laptop[:url] = item.css("a").last["href"]
       laptops << laptop
     end
+    
     laptops
   end
   
@@ -37,7 +38,6 @@ class BestLaptop::Scraper
   
   def print_laptops
     self.scrape_laptop_page
-    
     Laptop.all.each do |item|
      puts "Pros: #{item.pros} "
      puts "Cons: #{item.cons} "
