@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/best_laptop"
+
+require "bundler/setup"
+
+BestLaptop::CLI.new.run
+
+
