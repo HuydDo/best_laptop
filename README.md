@@ -4,7 +4,7 @@ This ruby gem provides a CLI to display the The Best Laptops for 2019.
 The data was contributed by pcmagazine website.
 
 ## Installation
-Change to dir best_laptop and install the gem and dependencies
+Change dir to best_laptop and install dependencies
    
     $ cd best_laptop
     $ bundle install
