@@ -41,8 +41,11 @@ class BestLaptop::CLI
         puts "Review:".colorize(:light_blue) + " #{laptop.description}"
         puts
         puts "Would you like to read more?"
-        answer = gets.strip
-        if ["Y", "YES"].include?(answer.upcase)
+        # answer = gets.strip
+        # if ["Y", "YES"].include?(answer.upcase)
+          
+        answer = gets.strip.downcase
+        if ["y", "yes"].include?(answer.downcase)
           add_laptop_detail(laptop.url,input.to_i - 1)
           puts
           puts "Pros:".colorize(:light_green) + " #{laptop.pros}"
