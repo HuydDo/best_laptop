@@ -53,7 +53,7 @@ class BestLaptop::CLI
         else 
           puts "Would you like to see the list again?"
           answer = gets.strip.downcase
-         
+          if ["n", "no"].include?(answer.downcase) 
             break
           end
         end
