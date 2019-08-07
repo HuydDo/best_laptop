@@ -32,7 +32,6 @@ class BestLaptop::CLI
     while input != 'exit'
       puts "Enter the number of the laptop for more information.\nType 'show' to display the list. Type 'exit' to quit."
       input = gets.strip.downcase
-      
       if input.to_i > 0 and input.to_i <= @list.size
         laptop = @list[input.to_i - 1]
         puts
@@ -41,7 +40,6 @@ class BestLaptop::CLI
         puts "Review:".colorize(:light_blue) + " #{laptop.description}"
         puts
         puts "Would you like to read more?"
-       
         answer = gets.strip.downcase
         if ["y", "yes"].include?(answer.downcase)
           add_laptop_detail(laptop.url,input.to_i - 1)
