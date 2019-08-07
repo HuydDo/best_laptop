@@ -48,12 +48,12 @@ class BestLaptop::CLI
           puts "Cons:".colorize(:light_red) + " #{laptop.cons}"
           puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
-        else 
-          puts "Would you like to see the list again?"
-          answer = gets.strip.downcase
-          if ["n", "no"].include?(answer.downcase) 
-            break
-          end
+        # else 
+        #   puts "Would you like to see the list again?"
+          # answer = gets.strip.downcase
+          # if ["n", "no"].include?(answer.downcase) 
+          #   break
+          # end
         end
       elsif input == "show"
         list_laptops
