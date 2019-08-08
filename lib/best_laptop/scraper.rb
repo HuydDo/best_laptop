@@ -19,7 +19,6 @@ class BestLaptop::Scraper
       laptop[:url] = item.css("a").last["href"]
       laptops << laptop
     end
-    
     laptops
   end
   
@@ -32,7 +31,6 @@ class BestLaptop::Scraper
       detail[:cons] = item.css("li p")[1].text.strip
       detail[:bottom_line] = item.css("li p")[2].text.strip
     end
-    
     detail
   end
   
