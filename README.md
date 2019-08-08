@@ -3,10 +3,23 @@
 This ruby gem provides a CLI to display The Best Top 10 Laptops for 2019. 
 The data was contributed by pcmagazine website.
 
+## Prerequisites
+
+You need to delete exisiting folder under Developemnt dir before clone the repo 
+by right click on folder and select Delete.
+
 ## Installation
-Change dir to best_laptop and install dependencies
+
+Clone repo by using this command
+
+    $ git clone git@github.com:HuydDo/best_laptop.git
+
+Change dir to best_laptop 
    
     $ cd best_laptop
+    
+Install dependencies
+
     $ bundle install
 
 ## Usage
