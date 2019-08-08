@@ -55,6 +55,8 @@ class BestLaptop::CLI
         end
       elsif input == "show"
         list_laptops
+      else 
+        puts "Please check your input."
       end
     end
     puts "Have a nice day!"
