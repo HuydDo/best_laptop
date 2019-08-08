@@ -26,7 +26,7 @@ Install dependencies
 
 Type the below line and follow the screen promps
 
-    $ ruby bin/run
+    $ run
 
 ## Development
 
