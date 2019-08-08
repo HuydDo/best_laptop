@@ -39,7 +39,7 @@ class BestLaptop::CLI
         puts "MSRP:".colorize(:light_blue) + " #{laptop.price}"
         puts "Review:".colorize(:light_blue) + " #{laptop.description}"
         puts
-        puts "Would you like to read more?"
+        puts "Would you like to read more? Enter Y or N"
         answer = gets.strip.downcase
         if ["y", "yes"].include?(answer.downcase)
           add_laptop_detail(laptop.url,input.to_i - 1)
@@ -48,12 +48,10 @@ class BestLaptop::CLI
           puts "Cons:".colorize(:light_red) + " #{laptop.cons}"
           puts "Bottom Line:".colorize(:light_blue) + " #{laptop.bottom_line}"
           puts
-        # else 
-        #   puts "Would you like to see the list again?"
-          # answer = gets.strip.downcase
-          # if ["n", "no"].include?(answer.downcase) 
-          #   break
-          # end
+        elsif ["n", "no"].include?(answer.downcase) 
+          break
+        else 
+          puts "Please check your input."
         end
       elsif input == "show"
         list_laptops
