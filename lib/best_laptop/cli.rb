@@ -55,6 +55,8 @@ class BestLaptop::CLI
         end
       elsif input == "show"
         list_laptops
+      elsif input == "exit"
+        break
       else 
         puts "Please check your input."
       end
