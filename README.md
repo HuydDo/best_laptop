@@ -3,11 +3,6 @@
 This ruby gem provides a CLI to display The Best Top 10 Laptops for 2019. 
 The data was contributed by pcmagazine website.
 
-## Prerequisites
-
-You need to delete exisiting folder under Developemnt dir before clone the repo 
-by right click on folder and select Delete.
-
 ## Installation
 
 Clone repo by using this command
