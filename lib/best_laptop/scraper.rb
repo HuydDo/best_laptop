@@ -1,17 +1,12 @@
 class BestLaptop::Scraper
 
-  def self.get_page
-    doc = Nokogiri::HTML(open("https://www.pcmag.com/roundup/255115/the-best-laptops"))
-  end
-  
-  def self.get_laptops
-    self.get_page.css("#roundup-container .roundup-list-container .roundup-item-row")
-  end
-  
   def self.scrape_laptops
+    html = open("https://www.pcmag.com/roundup/255115/the-best-laptops")
+    doc = Nokogiri::HTML(html)
+    list_laptops = doc.css("#roundup-container .roundup-list-container .roundup-item-row")
     laptops = []
     
-    self.get_laptops.each do |item|
+    list_laptops.each do |item|
       laptop = {}
       laptop[:name] = item.css("h3").text.strip
       laptop[:price] = item.css(".msrp").text.gsub("MSRP: ","").strip
