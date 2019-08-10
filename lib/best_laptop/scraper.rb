@@ -29,15 +29,6 @@ class BestLaptop::Scraper
     detail
   end
   
-  def print_laptops
-    self.scrape_laptop_page
-    Laptop.all.each do |item|
-     puts "Pros: #{item.pros} "
-     puts "Cons: #{item.cons} "
-     puts "Bottom Line: #{item.bottom_line} "
-    end
-  end
-  
 end
 
 
