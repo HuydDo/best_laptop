@@ -18,6 +18,7 @@ class BestLaptop::Scraper
   end
   
   def self.scrape_laptop_page(laptop_url)
+    binding.pry
     doc = Nokogiri::HTML (open(laptop_url))
     detail = {}
     

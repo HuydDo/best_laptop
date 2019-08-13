@@ -22,8 +22,11 @@ class BestLaptop::CLI
   
   def add_laptop_detail(url,index)
     laptop = BestLaptop::Laptop.all[index]
-    laptop_info = BestLaptop::Scraper.scrape_laptop_page(url)
-    laptop.add_laptop_info(laptop_info)
+    if !laptop.scraped
+      laptop.scraped = true
+      laptop_info = BestLaptop::Scraper.scrape_laptop_page(url)
+      laptop.add_laptop_info(laptop_info)
+    end
   end
   
   def menu

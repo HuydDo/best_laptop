@@ -6,4 +6,3 @@ require "bundler/setup"
 
 BestLaptop::CLI.new.run
 
-
